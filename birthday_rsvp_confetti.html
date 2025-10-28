@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Padilha & Giliard's Birthday RSVP</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000, #444);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+    .yes { background-color: #4CAF50; color: white; }
+    .no { background-color: #f44336; color: white; }
+    .yes:hover { background-color: #45a049; }
+    .no:hover { background-color: #d73833; }
+    #message { margin-top: 20px; font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <img src="YOUR_IMAGE_URL_HERE" alt="Birthday Invitation" />
+  <h1>Padilha & Giliard's Birthday RSVP</h1>
+  <p>Please let us know if you can join the celebration!</p>
+
+  <button class="yes" onclick="acceptInvite()">✅ Yes, I'll come!</button>
+  <button class="no" onclick="declineInvite()">❌ Sorry, can't make it</button>
+
+  <div id="message"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+    function acceptInvite() {
+      confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
+      document.getElementById('message').innerHTML = "We’re excited to see you! 🎉😊";
+      window.open('https://wa.me/447702098443?text=Hi%20Vitoria!%20I%27m%20coming%20to%20Padilha%20%26%20Giliard%27s%20Birthday%20Party!%20%F0%9F%8E%89', '_blank');
+    }
+
+    function declineInvite() {
+      document.getElementById('message').innerHTML = "Sorry you can’t make it 😢";
+      window.open('https://wa.me/447702098443?text=Hi%20Vitoria!%20Sorry%2C%20I%20can%27t%20make%20it%20to%20Padilha%20%26%20Giliard%27s%20Birthday%20Party%20%F0%9F%98%A2', '_blank');
+    }
+  </script>
+</body>
+</html>
